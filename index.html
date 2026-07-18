@@ -86,7 +86,6 @@
   @keyframes driftB { from { transform: translate(0,0); } to { transform: translate(-26px, 16px); } }
 
   .header-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; flex-wrap: wrap; }
-  @media (max-width: 640px) { .header-top { flex-direction: column; align-items: flex-start; } .header-quote { text-align: left; max-width: 100%; } }
   .logo {
     font-family: var(--font-display); font-style: italic; font-weight: 600;
     font-size: clamp(1.7rem, 4vw, 2.4rem); letter-spacing: -0.5px; line-height: 1;
@@ -97,13 +96,6 @@
     font-family: var(--font-mono); font-size: 0.68rem; color: var(--sub);
     letter-spacing: 2px; text-transform: uppercase; margin-top: 8px; font-weight: 500;
   }
-  .header-quote {
-    flex: 1; max-width: 460px; text-align: right;
-    font-family: var(--font-display); font-style: italic; font-weight: 500; color: var(--text);
-    font-size: clamp(0.85rem, 2vw, 1.15rem); line-height: 1.35; letter-spacing: -0.1px;
-    opacity: 0.92;
-  }
-
   @keyframes heroIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
   /* ── STATS BAR ── */
@@ -310,7 +302,6 @@
       <div class="logo">The <em>Sewer</em></div>
       <div class="tagline">Amanda's Marvel Collection</div>
     </div>
-    <div class="header-quote">For a cool friend who is my dude but isn't a dude,<br>She's a cool Asian dude.</div>
   </div>
 </header>
 
