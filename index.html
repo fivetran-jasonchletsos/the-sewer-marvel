@@ -6,15 +6,16 @@
 <title>The Sewer — Amanda's Marvel Collection</title>
 <style>
   :root {
-    --red:     #e0263f;
-    --red-br:  #ff4a63;
-    --accent:  #5b8cff;
-    --bg:      #0a0a0d;
-    --panel:   #131318;
-    --panel2:  #1b1b22;
-    --border:  #2a2a33;
-    --text:    #f4f4f7;
-    --sub:     #9a9aa8;
+    --red:     #f2994a;
+    --red-br:  #ffab5e;
+    --accent:  #22c58b;
+    --purple:  #7c4fc9;
+    --bg:      #0d0817;
+    --panel:   #17101f;
+    --panel2:  #211630;
+    --border:  #34243f;
+    --text:    #f4f2f8;
+    --sub:     #a596c0;
     --header-h: 68px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -24,8 +25,8 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     min-height: 100vh;
     background-image:
-      radial-gradient(circle at 10% 0%, rgba(224,38,63,0.10), transparent 40%),
-      radial-gradient(circle at 95% 10%, rgba(91,140,255,0.08), transparent 45%);
+      radial-gradient(circle at 10% 0%, rgba(124,79,201,0.14), transparent 40%),
+      radial-gradient(circle at 95% 10%, rgba(34,197,139,0.09), transparent 45%);
   }
 
   /* ── HEADER ── */
@@ -42,16 +43,22 @@
   }
   .header-orb.orb-red {
     width: 220px; height: 220px; top: -90px; left: -40px;
-    background: radial-gradient(circle, rgba(224,38,63,0.55), transparent 70%);
+    background: radial-gradient(circle, rgba(124,79,201,0.55), transparent 70%);
     animation: driftRed 16s ease-in-out infinite alternate;
   }
   .header-orb.orb-blue {
     width: 260px; height: 260px; top: -120px; right: -60px;
-    background: radial-gradient(circle, rgba(91,140,255,0.45), transparent 70%);
+    background: radial-gradient(circle, rgba(34,197,139,0.45), transparent 70%);
     animation: driftBlue 20s ease-in-out infinite alternate;
   }
-  @keyframes driftRed  { from { transform: translate(0,0) scale(1); }   to { transform: translate(28px, 18px) scale(1.12); } }
-  @keyframes driftBlue { from { transform: translate(0,0) scale(1); }   to { transform: translate(-24px, 14px) scale(0.92); } }
+  .header-orb.orb-orange {
+    width: 160px; height: 160px; top: 10px; left: 42%;
+    background: radial-gradient(circle, rgba(242,153,74,0.35), transparent 70%);
+    animation: driftOrange 13s ease-in-out infinite alternate;
+  }
+  @keyframes driftRed    { from { transform: translate(0,0) scale(1); }   to { transform: translate(28px, 18px) scale(1.12); } }
+  @keyframes driftBlue   { from { transform: translate(0,0) scale(1); }   to { transform: translate(-24px, 14px) scale(0.92); } }
+  @keyframes driftOrange { from { transform: translate(0,0) scale(1); }   to { transform: translate(14px, -10px) scale(1.08); } }
   .header-top { display: flex; align-items: center; gap: 12px; max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
   .header-brand { flex: 1; }
   .logo {
@@ -159,7 +166,7 @@
   @media (hover: hover) {
     .card-tile:hover {
       transform: translateY(-5px) scale(1.015);
-      box-shadow: 0 14px 30px rgba(224,38,63,0.22), 0 4px 12px rgba(91,140,255,0.12);
+      box-shadow: 0 14px 30px rgba(124,79,201,0.28), 0 4px 12px rgba(34,197,139,0.14);
       border-color: var(--red-br);
     }
     .card-tile:hover::before { transform: skewX(-15deg) translateX(330%); }
@@ -245,6 +252,7 @@
 <header>
   <div class="header-orb orb-red" aria-hidden="true"></div>
   <div class="header-orb orb-blue" aria-hidden="true"></div>
+  <div class="header-orb orb-orange" aria-hidden="true"></div>
   <div class="header-top">
     <div class="header-brand">
       <div class="logo">The <span>Sewer</span></div>
@@ -255,7 +263,7 @@
 </header>
 
 <div class="pull-quote">
-  <p>For a cool friend who is my dude but isn't a dude, she's a cool Asian dude.</p>
+  <p>She's a cool Asian dude.</p>
 </div>
 
 <div class="stats-bar" id="statsBar">
